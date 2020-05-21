@@ -7,6 +7,10 @@ export class CartService {
 
   items = [];
 
+  constructor( 
+    private http: HttpClient
+  ) { }
+
   addToCart(product) {
     this.items.push(product);
   }
@@ -21,11 +25,9 @@ export class CartService {
   }
 
   getShippingPrices() {
-    this.http.get('/assets/shipping.json');
+    return this.http.get('/assets/shipping.json');
   }
 
-  constructor( 
-    private http: HttpClient
-  ) { }
+  
 
 }

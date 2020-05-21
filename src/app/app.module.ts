@@ -24,7 +24,7 @@ import { CartService } from './cart.service';
       { path: '', component: ProductListComponent },
       { path: 'products/:productId', component: ProductDetailsComponent },
       { path: 'cart', component: CartComponent },
-      { path: 'shipping', component: ShippingComponent}
+      { path: 'shipping', component: ShippingComponent },
     ])
   ],
   declarations: [
@@ -36,8 +36,9 @@ import { CartService } from './cart.service';
     CartComponent,
     ShippingComponent
   ],
-  bootstrap: [ AppComponent ],
-  providers: [CartService]
+  bootstrap: [
+    AppComponent
+  ]
 })
 export class AppModule { }
 
