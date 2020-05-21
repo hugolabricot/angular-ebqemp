@@ -22,4 +22,9 @@ export class ProductDetailsComponent implements OnInit {
     });
   }
 
+  addToCart(product) {
+    this.cartService.addToCart(product);
+    window.alert('The product you really want to buy was sucessfully, gently and nicely placed in your Shopping cart');
+  }
+
 }
